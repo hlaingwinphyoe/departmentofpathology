@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: #e3e3e3;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #835873;
+}
+
+header{
+    position: fixed;
+    top: 0px;
+    z-index: 2001;
+}
+
+.first-container{
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.time-container{
+    color: #835873;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 3px 12px;
+}
+.time-container .time-container-box{
+    padding: 10px;
+    margin: 10px;
+    background-color: #eee;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    cursor: pointer;
+    /*transition: 0.5s;*/
+}
+.time-container .time-container-box:hover{
+    color: #333;
+}
+.time-container .email-container-box{
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.call-container{
+    position: relative;
+}
+
+.call-container .social-v{
+    position: absolute;
+    top: -24px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.call-container .social-v a{
+    padding: 10px 15px;
+    margin-right: 15px;
+    /*border-radius: 50%;*/
+}
+
+.phone-call{
+    width: 160px;
+}
+
+.site-logo{
+    width: 45px;
+}
+.vertical_divider{
+    width: 2px;
+    height: 50px;
+    background: var(--primary);
+}
+.nav_fixed{
+    position: fixed !important;
+    top: 66px;
+    z-index: 2001;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/*.nav-link{*/
+/*    position: relative;*/
+/*}*/
+
+/*.nav-link::after{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    background: #835873;*/
+/*    width: 0;*/
+/*    height: 3px;*/
+/*    left: 0;*/
+/*    bottom: -3px;*/
+/*    transition: 0.5s;*/
+/*}*/
+
+.nav-link:hover::after{
+    width: 100%;
+}
+/*.nav-list{*/
+/*    display: flex !important;*/
+/*    width: 100% !important;*/
+/*    align-items: flex-end !important;*/
+/*}*/
+.nav-list > li{
+    line-height: 4rem;
+    position: relative;
+    padding: 0 8px;
+}
+.sub-menu li{
+    line-height: 3rem;
+}
+.nav-list a{
+    display: block;
+    color: #5c5757 !important;
+    padding: 0 1.5rem;
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 650ms;
+}
+.nav-list a:hover{
+    color: #835873 !important;
+}
+.sub-menu{
+    width: 20rem;
+    display: block;
+    position: absolute;
+    border-top: 3px solid #835873;
+    background-color: #fff;
+    z-index: 100;
+    top: 13rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 650ms ease;
+}
+.sub-menu::before{
+    content: "";
+    position: absolute;
+    top: -1.2rem;
+    left: 2rem;
+    border: 0.4rem solid transparent;
+    border-bottom-color: #835873;
+}
+.nav-list li:hover > .sub-menu{
+    top: 4.5rem;
+    opacity: 1;
+    visibility: visible;
+}
+.sub-menu li{
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+    padding: 8px 15px;
+    color: #5a5a5a;
+}
+.sub-menu li span{
+    transition: 0.5s;
+}
+.sub-menu li:hover span{
+    /*transform: translateX(10px);*/
+    margin-left: 20px;
+}
+
+/*li.move-right{*/
+/*    margin: auto 0 auto auto;*/
+/*    line-height: initial;*/
+/*}*/
+
+li .fa-sort-down{
+    color: var(--primary);
+}
+
+/*End nav section*/
+
+.bg-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+#particles-js{
+    position: relative;
+    height: 100vh;
+    background: #fff;
+    mix-blend-mode: screen;
+}
+
+.scroll_to_top{
+    background: #835873;
+    position: fixed;
+    bottom: 0;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+    box-shadow: 0 0 5px rgba(0,0,0,.25);
+}
+.scroll_to_top:hover{
+    text-decoration: none;
+}
+.scroll_to_top.scrollTop{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 2003;
+}
+
+.title-spacing{
+    letter-spacing: 4px;
+}
+
+.service-lists{
+
+}
+.service-lists li{
+    letter-spacing: 3px;
+}
+
+/*.outer{*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    background: rgba(0,0,0,0.5);*/
+/*}*/
+.details{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+}
+.details h1{
+    letter-spacing: 10px;
+    font-size: 60px;
+    position: relative;
+    margin: 0;
+    font-weight: 900;
+    color: #000;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.details h1::before{
+    content: "";
+    position: absolute;
+    left: 120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent 0%,#fff 5%,#fff 100%);
+    animation: text 5.5s linear forwards;
+}
+
+@keyframes text{
+    0%{
+        left: -20%;
+    }
+    100%{
+        left: 120%;
+    }
+}
+.details h1 span{
+    color: var(--primary);
+}
+
+.details span{
+    letter-spacing: 5px;
+}
+
+.divider{
+    border-bottom: 3px solid #835873;
+    width: 110px;
+    margin: auto;
+}
+
+
+.doctors-btn{
+    padding: 3px 10px !important;
+}
+.box{
+    float: left;
+    text-align: center;
+    display: none;
+}
+.show{
+    display: block;
+}
+.filterBg{
+    background-color: #835873;
+}
+
+#button .filterButton.active{
+    background: #835873;
+    border-color: #835873;
+}
+
+.profile-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 76%;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.profile-img > * {
+    transform: translate(20px);
+}
+.profile-img:hover{
+    opacity: 1;
+}
+
+.profile-desc{
+    position: absolute;
+    bottom: 184px;
+    padding: 10px;
+    background: #835873;
+    width: 465px;
+    /*border-radius: 0.25rem;*/
+}
+
+.doctors-timeTable{
+    position: relative;
+    top: 80px;
+    left: -20px;
+}
+.doctors-btn{
+    padding: 12px 15px;
+    border: 1px solid #835873;
+    transition: 0.5s;
+    border-radius: 0.25rem;
+}
+.doctors-btn:hover{
+    text-decoration: none;
+    outline: none;
+    background: #835873;
+    color: #fff;
+    border-color: #007d68;
+}
+.doctors-btn:active{
+    background: #333;
+}
+
+.departments{
+    margin-top: 10px;
+    /*height: 100vh;*/
+}
+
+.departments .card-columns .card{
+    background: #fefefe !important;
+    /*border: 1px solid #835873 !important;*/
+}
+.departments .card-columns .card .card-body{
+    padding: 0 1.25rem 1.25rem;
+}
+
+.departments_img{
+    height: 200px;
+    transition: 0.5s;
+}
+
+.departments_img:hover{
+    transform: scale(1.09);
+}
+
+.departments_svg{
+    width: 330px;
+    margin-top: 20px;
+}
+
+.divider_contact{
+    width: 80px;
+    background-color: #835873;
+    height: 3px;
+    margin-bottom: 20px;
+}
+.feedback_img{
+    width: 23px;
+}
+
+.scan_img{
+    width: 150px;
+    transform: translate(85px,20px);
+}
+
+.content-text{
+    position: absolute;
+    top: 0;
+}
+.divider-2{
+    border-bottom: 3px solid #835873;
+    width: 80px;
+    border-radius: 10px;
+}
+.page-container{
+    padding: 10px 15px;
+    width: 100%;
+    border-bottom: 1px solid var(--primary);
+}
+.page-container-box{
+    color: #fff !important;
+}
+.page-container-box span{
+    transition: 0.5s;
+}
+.page-container-box:hover{
+    text-decoration: none;
+}
+.page-container-box:hover span{
+    margin-left: 20px;
+}
+.footer_mail:hover{
+    text-decoration: none;
+}
+.footer_phone:hover{
+    text-decoration: none;
+}
+
+
+/*start department of Blood Bank*/
+
+.blood_bank{
+    background-image: url("../img/department/bb3.png");
+    background-size: cover;
+}
+
+.blood_bank_home{
+    position: absolute;
+    top: 220px;
+    right: 0;
+    transform: translate(0px, 200px);
+}
+.column_navigation{
+
+}
+.column_navigation ul{
+    width: 330px;
+}
+.column_navigation ul li{
+    padding: 20px 20px 24px;
+    border: 1px solid #835873;
+    border-radius: 0.25rem;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    position: relative;
+}
+.column_navigation ul li a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: #835873;
+}
+.column_navigation ul li a .text{
+    transition: 0.5s;
+    color: #835873;
+}
+.column_navigation ul li a .text:hover {
+    margin-left: 20px;
+}
+.column_navigation ul li.column_navigation_active{
+    background: #835873;
+    border-color: #835873;
+}
+.column_navigation ul li.column_navigation_active .text{
+    color: #fff !important;
+}
+.column_navigation ul li.column_navigation_active .fa-angle-right{
+    color: #fff !important;
+}
+
+.blood_bank_contact{
+    height: 200px;
+    background-image: url("../img/department/bb4.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.department_contact_box{
+    width: 300px;
+    margin: 60px auto;
+}
+
+
+/*End department of Blood Bank*/
+
+
+/*Start department of Chem Path*/
+
+.chem_path{
+    background-image: url("../img/department/cp1.png");
+    background-size: cover;
+}
+
+.chem_path_contact{
+    height: 200px;
+    background-image: url("../img/department/cp4.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*End department of Chem Path*/
+
+
+/*Start department of HaematoPathology*/
+
+.hae_path{
+    background-image: url("../img/department/hp.jpg");
+    background-size: cover;
+}
+
+.haemato_contact{
+    height: 200px;
+    background-image: url("../img/department/mp3.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*End department of HaematoPathology*/
+
+/*Start department of Microbiology*/
+
+.micro{
+    background-image: url("../img/department/mp2.png");
+    background-size: cover;
+}
+
+.micro_contact{
+    height: 200px;
+    background-image: url("../img/department/mp3.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*End department of Microbiology*/
+
+.ani_delay_1{
+    animation-delay: 0.5s;
+}
+.ani_delay_2{
+    animation-delay: 1s;
+}
+.ani_delay_3{
+    animation-delay: 1.5s;
+}
+
+
+
+@media screen and (max-width: 840px){
+    .nav_fixed{
+        left: -85px;
+    }
+    .card-columns{
+        column-count: 2 !important;
+    }
+    .details h1{
+        font-size: 40px !important;
+    }
+    .details span{
+        letter-spacing: 4px !important;
+    }
+    .blood_bank_home{
+        transform: translate(-85px, 200px);
+    }
+    .scroll_to_top{
+        right: 195px;
+    }
+    .column_navigation ul{
+        width: 225px;
+    }
+    .column_navigation ul li {
+        padding: 10px;
+    }
+    .scan_img{
+        transform: none;
+    }
+    .departments_svg{
+        width: 240px;
+        margin-top: 115px;
+    }
+}
+
+@media  screen and (max-width: 480px) {
+    .first-container{
+        flex-direction: column;
+    }
+    .time-container .time-container-box{
+        background: none !important;
+        display: block;
+        border: none;
+        transform: translate(-138px, -32px);
+    }
+    .time-container .email-container-box{
+        background: none !important;
+        display: block;
+        border: none;
+        transform: translate(-127px, -59px);
+    }
+    .card-columns{
+        column-count: 1 !important;
+    }
+    .sub-menu{
+        position: initial;
+        border: 3px solid transparent;
+        border-left-color: #835873!important;
+        margin-left: 1rem;
+        max-height: 0;
+        padding: 10px;
+    }
+    .sub-menu::before{
+        display: none;
+    }
+    .nav-list li:hover > .sub-menu{
+        opacity: 1;
+        visibility: visible;
+        max-height: initial;
+    }
+    .details h1{
+        font-size: 30px !important;
+    }
+    .details span{
+        letter-spacing: 4px !important;
+    }
+}
