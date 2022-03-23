@@ -1,14 +1,14 @@
-filterObjects("pathologist");
-
-function filterObjects(c){
-    let x, i;
-    x = document.getElementsByClassName("box");
-    if(c === "all") c = "";
-    for(i=0;i<x.length;i++){
-        removeClass(x[i], "show");
-        if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
-    }
-}
+// filterObjects("pathologist");
+//
+// function filterObjects(c){
+//     let x, i;
+//     x = document.getElementsByClassName("box");
+//     if(c === "all") c = "";
+//     for(i=0;i<x.length;i++){
+//         removeClass(x[i], "show");
+//         if(x[i].className.indexOf(c) > -1) addClass(x[i], "show")
+//     }
+// }
 
 function addClass(element,name){
     let i,arr1,arr2;
@@ -32,9 +32,9 @@ function removeClass(element, name){
     }
     element.className = arr1.join(" ");
 }
-$("#button .filterButton").click(function (){
-    $(this).addClass("active").siblings().removeClass("active");
-});
+// $("#button .filterButton").click(function (){
+//     $(this).addClass("active").siblings().removeClass("active");
+// });
 
 const toTop = document.querySelector(".scroll_to_top");
 window.addEventListener("scroll", ()=> {

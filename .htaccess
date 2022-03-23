@@ -1,0 +1,9 @@
+RewriteEngine on
+
+#single file
+RewriteRule ^pathology$ index.php [L]
+RewriteRule ^bloodbank$ blood_bank_department.php [L]
+RewriteRule ^histopath$ cellularpath_department.php [L]
+RewriteRule ^chempath$ chempath_department.php [L]
+RewriteRule ^haepath$ haepath_department.php [L]
+RewriteRule ^mircopath$ micropath_department.php [L]

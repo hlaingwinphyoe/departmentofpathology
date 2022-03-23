@@ -76,7 +76,7 @@
                             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                                 <ul class="nav-list navbar-nav">
                                     <li class="nav-item">
-                                        <a href="index.html" class="nav-link" target="_blank"> Home</a>
+                                        <a href="pathology" class="nav-link" target="_blank"> Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="#about" class="nav-link">About</a>
@@ -93,7 +93,7 @@
                                         </a>
                                         <ul class="sub-menu navbar-nav">
                                             <li class="nav-item">
-                                                <a href="blood_bank_department.html" class="nav-link">
+                                                <a href="bloodbank" class="nav-link">
                                                     <i class="fa fa-angle-right"></i>
                                                     <span>Blood Bank</span>
                                                 </a>
@@ -105,19 +105,19 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="haepath_department.html" class="nav-link">
+                                                <a href="haepath" class="nav-link">
                                                     <i class="fa fa-angle-right"></i>
                                                     <span>Haematology</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="micropath_department.html" class="nav-link">
+                                                <a href="micropath" class="nav-link">
                                                     <i class="fa fa-angle-right"></i>
                                                     <span>Microbiology</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="cellularpath_department.html" class="nav-link">
+                                                <a href="histopath" class="nav-link">
                                                     <i class="fa fa-angle-right"></i>
                                                     <span>Cellular Pathology</span>
                                                 </a>
@@ -166,34 +166,34 @@
                         <div class="column_navigation">
                             <ul>
                                 <li >
-                                    <a href="blood_bank_department.html" class="font-weight-bolder">
+                                    <a href="bloodbank" class="font-weight-bolder">
                                         <i class="fa fa-angle-right"></i>
                                         <span class="text">Blood Bank</span>
                                     </a>
                                 </li>
                                 <li class="column_navigation_active">
-                                    <a href="" class="font-weight-bolder">
+                                    <a href="chempath" class="font-weight-bolder">
                                         <i class="fa fa-angle-right"></i>
                                         <span class="text">Chemical Pathology</span>
 
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="haepath_department.html" class="font-weight-bolder">
+                                    <a href="haepath" class="font-weight-bolder">
                                         <i class="fa fa-angle-right"></i>
                                         <span class="text">Haemato Pathology</span>
 
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="micropath_department.html" class="font-weight-bolder">
+                                    <a href="micropath" class="font-weight-bolder">
                                         <i class="fa fa-angle-right"></i>
                                         <span class="text">Microbiology</span>
 
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="cellularpath_department.html" class="font-weight-bolder">
+                                    <a href="histopath" class="font-weight-bolder">
                                         <i class="fa fa-angle-right"></i>
                                         <span class="text">Cellular Pathology</span>
 
@@ -589,7 +589,7 @@
         // console.log(offset);
         parallax.style.backgroundPositionY = offset * 0.7 + "px";
     });
-    filterObjects("chem_path")
+    // filterObjects("chem_path")
 </script>
 </body>
 </html>
