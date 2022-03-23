@@ -1,5 +1,16 @@
+let screenHeight = $(window).height();
+$(window).scroll(function () {
+    let currentPosition = $(this).scrollTop();
+    if(currentPosition >= screenHeight-100){
+        $('.site-nav').addClass("nav_fixed");
+    }
+    else {
+        $('.site-nav').removeClass("nav_fixed");
+    }
+});
+
 // filterObjects("pathologist");
-//
+
 // function filterObjects(c){
 //     let x, i;
 //     x = document.getElementsByClassName("box");
@@ -32,9 +43,9 @@ function removeClass(element, name){
     }
     element.className = arr1.join(" ");
 }
-// $("#button .filterButton").click(function (){
-//     $(this).addClass("active").siblings().removeClass("active");
-// });
+$("#button .filterButton").click(function (){
+    $(this).addClass("active").siblings().removeClass("active");
+});
 
 const toTop = document.querySelector(".scroll_to_top");
 window.addEventListener("scroll", ()=> {
@@ -43,6 +54,16 @@ window.addEventListener("scroll", ()=> {
     }
     else{
         toTop.classList.remove("scrollTop");
+    }
+});
+
+$(".navbar-toggler").click(function (){
+    let result = $(".navbar-collapse").hasClass("show");
+    console.log(result);
+    if (result){
+        $(".menu-icon").removeClass("fa-close").addClass("fa-bars");
+    }else{
+        $(".menu-icon").removeClass("fa-bars").addClass("fa-close");
     }
 });
 
